@@ -1,7 +1,7 @@
-dir='/Users/ahars/Github/dockerfiles/java8'
+dir='/Users/ahars/Github/dockerfiles/java'
 
-docker build --rm -t ahars/java8 $dir
+docker build --rm -t ahars/java $dir
 docker run -t -i --rm \
-	--name java8 \
-	ahars/java8 \
+	--name java \
+	ahars/java \
 	/bin/bash 
