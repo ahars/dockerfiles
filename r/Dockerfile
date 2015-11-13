@@ -9,5 +9,5 @@ RUN apt-get update -y && \
 
 RUN apt-get install -y r-base 
 
-CMD R
+CMD R --no-save
 
