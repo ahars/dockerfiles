@@ -2,15 +2,13 @@ FROM ubuntu:15.10
 MAINTAINER Antoine Hars <antoine.hars@gmail.com>
 
 RUN apt-get update -y && \
-    apt-get upgrade -y
+    apt-get install -y \
+        vim \
+        git \
+        wget \
+        curl 
 
-# Install java 8
-RUN apt-get install -y \
-    openjdk-8-jdk \
-    vim \
-    git \
-    wget \
-    curl
+RUN apt-get install -y openjdk-8-jdk
 
 # Install Maven 3.3.3
 RUN wget http://apache.websitebeheerjd.nl/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz && \
