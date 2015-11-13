@@ -2,11 +2,12 @@ FROM ubuntu:15.10
 MAINTAINER Antoine Hars <antoine.hars@gmail.com>
 
 RUN apt-get update -y && \
-    apt-get upgrade -y
+    apt-get install -y \
+        vim \
+        git \
+        curl
 
-# Install java 8
-RUN apt-get install -y \
-    vim \
-    r-base
+RUN apt-get install -y r-base 
 
 CMD R
+
