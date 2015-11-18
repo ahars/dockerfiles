@@ -15,7 +15,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 EXPOSE 8080 7077
 
 # Install Apache Spark 1.5
-RUN curl http://d3kbcqa49mib13.cloudfront.net/spark-1.5.2.tgz | tar zxv
+RUN curl http://wwwftp.ciril.fr/pub/apache/spark/spark-1.5.2/spark-1.5.2-bin-hadoop2.6.tgz | tar zxv
 
-
+CMD spark-1.5.2-bin-hadoop2.6/bin/spark-shell
 
