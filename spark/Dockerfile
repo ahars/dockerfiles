@@ -12,10 +12,11 @@ RUN apt-get install -y \
     openjdk-8-jdk
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV SPARK_VERSION 1.6.1
 EXPOSE 8080 7077
 
-# Install Apache Spark 1.5
-RUN curl http://wwwftp.ciril.fr/pub/apache/spark/spark-1.5.2/spark-1.5.2-bin-hadoop2.6.tgz | tar zxv
+# Install Apache Spark
+RUN curl http://wwwftp.ciril.fr/pub/apache/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop2.6.tgz | tar zxv
 
-CMD spark-1.5.2-bin-hadoop2.6/bin/spark-shell
+CMD /bin/bash
 
